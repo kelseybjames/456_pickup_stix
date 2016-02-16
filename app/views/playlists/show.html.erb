@@ -1,0 +1,8 @@
+<% @playlist.songs.each do |song| %>
+  <h3><%= song.name %></h3>
+  <%= link_to 'Artist Page', artist_path(song.artist) %> |
+  <% if @playlist.user == current_user %>
+    <%= link_to 'Edit Playlist', edit_playlist_path(@playlist) %> |
+    <%= link_to 'Delete Song From Playlist', @playlist.songs.delete(song) %>
+  <% end %>
+<% end %>

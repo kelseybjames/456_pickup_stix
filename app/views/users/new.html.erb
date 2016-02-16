@@ -1,0 +1,5 @@
+<% unless signed_in_user? %>
+  <%= render partial: 'user_form' %>
+<% end %>
+
+<%= link_to 'Artists', artists_path %>

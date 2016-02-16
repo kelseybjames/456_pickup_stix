@@ -64,7 +64,8 @@ users = [
   {
     :first_name => 'foo',
     :last_name => 'bar',
-    :email => 'foo@bar.com'
+    :email => 'foo@bar.com',
+    :password => 'test'
   }
 ]
 (MULTIPLIER * NUM_USERS).times do
@@ -75,7 +76,8 @@ users = [
   users << {
     :first_name => first_name,
     :last_name => last_name,
-    :email => email
+    :email => email,
+    :password => 'test'
   }
 end
 User.create(users)
